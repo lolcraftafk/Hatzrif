@@ -22,33 +22,32 @@
                     <div class="column">
                         <div class="cell headers" onclick="newLine(this)">ראשון</div>
                         {%for a in sunday%}
-                            <div class="cell" contenteditable>{{a}}</div>
+                            <div class="cell">{{markup(a)}}</div>
                         {%endfor%}
                     </div>
                     <div class="column">
                         <div class="cell headers" onclick="newLine(this)">שני</div>
-                        <div class="cell" contenteditable><b>שמ"צים ח' - יואב </b></br> (17:00-18:00)</div>
-                        <div class="cell" contenteditable><b>שמ"צים ט' - איתי </b></br> (17:00-18:00)</div>
-                        <div class="cell" contenteditable><b>מד"צים ח'-ט' - מאור ורוני </b></br> (17:00-18:00)</div>
+                        {%for a in monday%}
+                            <div class="cell">{{markup(a)}}</div>
+                        {%endfor%}
                     </div>
                     <div class="column">
                         <div class="cell headers" onclick="newLine(this)">שלישי</div>
-                        <div class="cell" contenteditable><b>גינה קהילתית - שני </b></br> (16:30-17:30)</div>
-                        <div class="cell" contenteditable><b>שמ"בים הרפתקה - עמיר </b></br> (17:00-19:00)</div>
+                        {%for a in tuesday%}
+                            <div class="cell">{{markup(a)}}</div>
+                        {%endfor%}
                     </div>
                     <div class="column">
                         <div class="cell headers" onclick="newLine(this)">רביעי</div>
-                        <div class="cell" contenteditable><b>נוע"ם ג'-ד' - כנען, זוהר וכליל </b></br> (17:00-18:30)</div>
-                        <div class="cell" contenteditable><b>מד"צים ה' - שון </b></br> (17:00-18:00)</div>
-                        <div class="cell" contenteditable><b>ישיבת צוות מד"בים </b></br> (19:00-20:00)</div>
-                        <div class="cell" contenteditable><b>מד"בים - שני </b></br> (20:00-21:00)</div>
-                        <div class="cell" contenteditable><b>ישיבת צוות בוגר</b></br> (20:00-21:00)</div>
+                        {%for a in wednesday%}
+                            <div class="cell">{{markup(a)}}</div>
+                        {%endfor%}
                     </div>
                     <div class="column">
                         <div class="cell headers" onclick="newLine(this)">חמישי</div>
-                        <div class="cell" contenteditable><b>תאטרון ה'-ו' - נועם ועדן</b></br> (16:30-18:00)</div>
-                        <div class="cell" contenteditable><b>שמ"צים ז' - עמיר</b></br> (17:00-19:00)</div>
-                        <div class="cell" contenteditable><b>ישיבת צוות צעיר</b></br> (20:00-21:00)</div>
+                        {%for a in thursday%}
+                            <div class="cell">{{markup(a)}}</div>
+                        {%endfor%}
                     </div>
                 </div>
             </div>

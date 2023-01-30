@@ -1,12 +1,15 @@
 from flask import Flask, render_template
 from markupsafe import Markup
-
+import json
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    return render_template('timetable.html', sunday=[Markup("<b>מד\"צים ז' - אופק </b></br> (17:00-18:00)"), Markup("<b>מרחב פתוח</b></br> (16:00-21:00)")])
+    file = open("static/timetables.json", "r", encoding="utf-8")
+    text = file.read()
+    table = json.loads(text)
+    return render_template('timetable.html', sunday=table['sunday'], monday=table['monday'], tuesday=table['tuesday'], wednesday=table['wednesday'], thursday = table['thursday'], markup=Markup)
 
 app.run(debug=True)
